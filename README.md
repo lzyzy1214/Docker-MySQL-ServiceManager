@@ -1,5 +1,10 @@
 # Docker-Service-Manager
 一个基于 PowerShell 的 Docker 本地服务管理工具集。目前内置 **MySQL 单实例管理器**，支持容器创建、运维、备份、恢复、用户权限、远程导入、监控诊断等完整生命周期管理。
+[![Docker](https://img.shields.io/badge/Docker-Desktop%2FEngine-blue)](https://www.docker.com/)
+
+**零依赖客户端**：所有 MySQL 操作通过 `docker exec` 调用容器内工具完成，无需在宿主机安装 MySQL
+**安全凭据**：root 密码通过 DPAPI 加密保存到项目目录 `.mysqlcred`，脚本中不记录明文密码
+
 ## 运行方式
 
 ### 方式一：创建新实例
